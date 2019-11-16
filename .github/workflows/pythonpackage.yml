@@ -3,6 +3,16 @@ name: Python package
 on: pull_request
 
 jobs:
+  new_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: echo
+        run: echo 'THIS IS NEW JOB'
+      - name: ping
+        run: ping google.com
+      - name: curl
+        run: curl google.com
   build:
     runs-on: ubuntu-latest
     strategy:
