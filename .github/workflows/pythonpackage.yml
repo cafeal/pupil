@@ -1,6 +1,9 @@
 name: Python package
 
 on:
+  pull_request:
+    branches:
+      - configure_ci
   push:
     branches:
     - master
